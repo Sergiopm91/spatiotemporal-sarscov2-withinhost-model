@@ -19,3 +19,51 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Requirements
+MATLAB R2021a or newer recommended
+No external toolbox is strictly required for the main simulation
+exportgraphics support is needed for figure export
+How to Run
+Open MATLAB in the repository folder.
+Run the main script:
+main_model
+Output figures and tables will be saved automatically in the figures/ directory.
+Outputs
+
+The script generates, among others, the following outputs:
+
+Spatially averaged dynamics panel
+Six-panel biological summary
+Validation figures
+Clinical viral-load comparison
+Cross-sectional spatial profiles
+Virus--temperature coupling figure
+Temporal convergence table
+Shape-parameter sensitivity analysis
+Three-dimensional spatial snapshots
+GIF-style rotating surfaces of selected final-state variables
+Biological Interpretation
+
+The model is intended to provide a mechanistic and spatially resolved description of within-host SARS-CoV-2 infection. It is not currently calibrated to patient-level longitudinal data and should therefore be interpreted primarily as a biologically grounded qualitative framework rather than as a patient-specific predictive tool.
+
+Limitations
+Parameters were selected to produce biologically plausible qualitative dynamics
+Temperature is modeled as a downstream marker rather than a feedback modulator
+Sensitivity analysis is local rather than global
+Explicit Euler time integration may require replacement for stiffer regimes
+The main simulation script uses finite-difference Laplacians, while supplementary shape-parameter analysis explores RBF-related behavior
+Future Work
+
+Potential extensions include:
+
+formal parameter estimation,
+Bayesian calibration with clinical viral-load data,
+global sensitivity analysis,
+fully meshless RBF collocation implementation for the full PDE system,
+bioheat transport coupling,
+pharmacokinetic/pharmacodynamic treatment modules,
+and three-dimensional patient-specific geometries.
+Citation
+
+If you use this repository in academic work, please cite the corresponding paper and reference this code repository.
