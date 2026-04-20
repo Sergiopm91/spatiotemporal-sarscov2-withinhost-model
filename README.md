@@ -47,7 +47,7 @@ The governing equations are solved over a two-dimensional tissue domain using an
 
 ```text
 .
-├── main_model.m
+├── maincode.m
 ├── figures/
 ├── README.md
 └── LICENSE
